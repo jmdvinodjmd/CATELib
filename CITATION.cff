@@ -18,3 +18,12 @@ keywords:
   - simultaneous interventions
   - heterogeneous treatment effects
 repository-code: "https://github.com/jmdvinodjmd/CATELib"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Chauhan
+      given-names: Vinod Kumar
+  title: "CATELib: A Library for Personalised Causal Effect Estimation"
+  journal: "GitHub (under development)"
+  year: 2026
+  url: "https://github.com/jmdvinodjmd/CATELib"

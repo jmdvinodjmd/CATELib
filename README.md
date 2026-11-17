@@ -227,12 +227,13 @@ If you use CATELib, please cite the software and the original papers for the
 methods you use. Method references are listed in their source modules, including
 the [H-learner paper](https://arxiv.org/abs/2502.08282).
 
-**Chauhan, Vinod Kumar (2026). CATELib: A Library for Personalised Causal Effect Estimation.**
+**Chauhan, Vinod Kumar (2026). CATELib: A Library for Personalised Causal Effect Estimation. GitHub (under development).**
 
 ```bibtex
-@software{chauhan2026catelib,
+@article{chauhan2026catelib,
   author  = {Chauhan, Vinod Kumar},
   title   = {CATELib: A Library for Personalised Causal Effect Estimation},
+  journal = {GitHub (under development)},
   year    = {2026},
   url     = {https://github.com/jmdvinodjmd/CATELib}
 }
