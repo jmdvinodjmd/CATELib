@@ -1,0 +1,278 @@
+{
+  "defaults": {
+    "dataset": "composite",
+    "data_seed": 0,
+    "seeds": [
+      0,
+      1
+    ],
+    "output": "../../results/method_comparison",
+    "metrics": [
+      "effects",
+      "interactions",
+      "policy"
+    ]
+  },
+  "parameters": {
+    "s": {
+      "hidden_sizes": [
+        16
+      ]
+    },
+    "ridge": {},
+    "xs": {
+      "estimator__hidden_sizes": [
+        16
+      ]
+    },
+    "t": {
+      "estimator__hidden_sizes": [
+        16
+      ]
+    },
+    "dec": {
+      "estimator__hidden_sizes": [
+        16
+      ]
+    },
+    "vsr": {
+      "estimator__hidden_sizes": [
+        16
+      ]
+    },
+    "scp": {
+      "estimator__hidden_sizes": [
+        16
+      ]
+    },
+    "scp-s": {
+      "estimator__hidden_sizes": [
+        16
+      ]
+    },
+    "cisi": {
+      "hidden_sizes": [
+        16
+      ]
+    },
+    "cihsi": {
+      "hidden_sizes": [
+        16
+      ]
+    },
+    "ncore": {
+      "hidden_sizes": [
+        16
+      ]
+    },
+    "tece": {
+      "hidden_sizes": [
+        16
+      ]
+    },
+    "tece-marginal": {
+      "hidden_sizes": [
+        16
+      ]
+    },
+    "dr": {},
+    "tarnet": {
+      "hidden_sizes": [
+        16
+      ]
+    },
+    "cfr": {
+      "hidden_sizes": [
+        16
+      ]
+    },
+    "h": {
+      "hidden_sizes": [
+        16
+      ],
+      "hypernet_sizes": [
+        16
+      ]
+    },
+    "xh": {
+      "estimator__hidden_sizes": [
+        16
+      ],
+      "estimator__hypernet_sizes": [
+        16
+      ]
+    }
+  },
+  "training": {
+    "s": {
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "ridge": {},
+    "xs": {
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "t": {
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "dec": {
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "vsr": {
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "scp": {
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "scp-s": {
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "cisi": {
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "cihsi": {
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "ncore": {
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "tece": {
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "tece-marginal": {
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "dr": {},
+    "tarnet": {
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "cfr": {
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "h": {
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    },
+    "xh": {
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "device": "cpu"
+    }
+  },
+  "tuning_file": "tuning.json",
+  "scenarios": {
+    "binary": {
+      "dataset": "composite",
+      "dataset_params": {
+        "n": 240,
+        "treatment_types": [
+          "binary",
+          "binary"
+        ],
+        "outcome_types": [
+          "continuous",
+          "binary"
+        ],
+        "feature_blocks": [
+          1,
+          1,
+          1
+        ]
+      },
+      "evaluation": {
+        "utility_weights": [
+          1,
+          -1
+        ],
+        "treatment_costs": [
+          0.05,
+          0.05
+        ]
+      }
+    }
+  },
+  "methods": {
+    "binary": [
+      "h",
+      "s",
+      "xh",
+      "xs",
+      "t",
+      "ridge",
+      "dec",
+      "vsr",
+      "scp",
+      "scp-s",
+      "cisi",
+      "cihsi",
+      "ncore",
+      "tece",
+      "tece-marginal",
+      "dr",
+      "tarnet",
+      "cfr"
+    ]
+  },
+  "scenario_parameters": {},
+  "scenario_tuning": {}
+}

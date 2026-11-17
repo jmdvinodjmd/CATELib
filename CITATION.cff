@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: >-
+  If you use CATELib, please cite this software and the original papers for the
+  methods you use.
+type: software
+license: MIT
+title: "CATELib: A Library for Personalised Causal Effect Estimation"
+authors:
+  - family-names: Chauhan
+    given-names: Vinod Kumar
+abstract: >-
+  A Python library for conditional average treatment effect estimation with
+  multiple simultaneous interventions, readable estimator interfaces and
+  optional experiment, tuning and saved-result reporting tools.
+keywords:
+  - causal inference
+  - conditional average treatment effects
+  - simultaneous interventions
+  - heterogeneous treatment effects
+repository-code: "https://github.com/jmdvinodjmd/CATELib"

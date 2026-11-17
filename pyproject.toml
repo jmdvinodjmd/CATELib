@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "catelib"
+version = "0.1.0"
+description = "A library for personalised causal effect estimation"
+license = {file = "LICENSE"}
+authors = [{name = "Vinod Kumar Chauhan"}]
+requires-python = ">=3.11"
+dependencies = ["numpy", "scipy", "scikit-learn", "torch", "POT", "joblib", "pandas", "matplotlib"]
+
+[project.optional-dependencies]
+notebooks = ["ipykernel"]
+dev = ["pytest"]
+
+[project.scripts]
+catelib = "catelib.run:main"
+
+[tool.setuptools]
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+
+[tool.setuptools.packages.find]
+include = ["catelib*"]
+
+# Preserve the research environment during migration; relax deliberately later.
+[tool.uv]
+constraint-dependencies = [
+    "numpy==2.4.6",
+    "scipy==1.17.1",
+    "scikit-learn==1.9.1",
+    "torch==2.15.0",
+    "POT==0.9.7.post1",
+    "joblib==1.6.0",
+    "pandas==3.1.1",
+    "matplotlib==3.11.2",
+    "ipykernel==7.4.0",
+    "pytest==9.2.0",
+]

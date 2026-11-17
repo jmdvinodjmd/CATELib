@@ -1,0 +1,48 @@
+{
+  "defaults": {
+    "dataset": "composite",
+    "dataset_params": {
+      "n": 240,
+      "treatment_types": [
+        "binary",
+        "continuous"
+      ],
+      "outcome_types": [
+        "continuous"
+      ]
+    },
+    "data_seed": 0,
+    "seeds": [
+      0,
+      1
+    ],
+    "metrics": [
+      "effects",
+      "interactions"
+    ],
+    "output": "../../results/simultaneous_interventions"
+  },
+  "parameters": {
+    "s": {
+      "hidden_sizes": [
+        16
+      ]
+    },
+    "ridge": {}
+  },
+  "training": {
+    "s": {
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 64
+    },
+    "ridge": {}
+  },
+  "tuning_file": "tuning.json",
+  "methods": {
+    "default": [
+      "s",
+      "ridge"
+    ]
+  }
+}

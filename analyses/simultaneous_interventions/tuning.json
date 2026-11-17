@@ -1,0 +1,33 @@
+{
+  "s": {
+    "strategy": "grid",
+    "param_space": {
+      "learning_rate": [
+        0.001,
+        0.01
+      ],
+      "hidden_sizes": [
+        [
+          16
+        ],
+        [
+          32
+        ]
+      ]
+    }
+  },
+  "ridge": {
+    "strategy": "grid",
+    "param_space": {
+      "alpha": [
+        0.1,
+        1,
+        10
+      ],
+      "order": [
+        1,
+        2
+      ]
+    }
+  }
+}
